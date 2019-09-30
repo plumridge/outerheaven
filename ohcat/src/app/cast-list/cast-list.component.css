@@ -1,0 +1,48 @@
+.casts {
+
+}
+
+.cast {
+    background-color: black;
+}
+
+.date {
+    text-align: center;
+}
+
+a:link {
+    color: whitesmoke;
+}
+
+a:visited {
+    color: plum;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+.tag {
+    text-align: center;
+
+}
+
+.shows {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+}
+
+.show {
+    text-align: center;
+}
+
+.showitem {
+
+}
+
+.show img {
+    width: 80%;
+}

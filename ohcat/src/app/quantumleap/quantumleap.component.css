@@ -1,0 +1,24 @@
+.qleap {
+    background-image: url('../../assets/qleap.gif');
+    background-size: cover;
+    text-align: center;
+}
+
+.year-list {
+    padding-top: 10%;
+    font-family: 'Yeseva One', cursive;
+    font-size: 42px;
+    padding-bottom: 10%;
+}
+
+.year-list ul {
+    list-style: none;
+}
+
+.year-list li:hover {
+    color: salmon;
+}
+
+.year-list li:active {
+    color: black;
+}

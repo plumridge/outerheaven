@@ -1,0 +1,30 @@
+<div class="casts">
+    <div *ngFor="let cast of casts">
+        <div class="cast">
+            <a [routerLink]="['/date', cast.date]">
+                <div class="date">
+                    <h1>
+                        {{ cast.date | ohdate }}
+                    </h1>
+                </div>
+            </a>
+            <!-- <div class="tag">
+                <div *ngFor="let tag of cast.tags">
+                    <h2>{{ tag }}</h2>
+                </div>
+            </div> -->
+            <div class="shows">
+                <div *ngFor="let show of cast.shows">
+                    <div class="show">
+                        <div class="showitem">
+                            <img src="{{ globals.api }}/poster/{{ show }}">
+                        </div>
+                        <div class="showitem">
+                            <p>{{ show }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

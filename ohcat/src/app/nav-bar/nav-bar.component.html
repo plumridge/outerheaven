@@ -1,0 +1,13 @@
+
+<div class="bar">
+    <div class="masthead">
+        <a [routerLink]="['/']"><p>Welcome to Outer heaven...</p></a>
+    </div>
+
+    <div class="search">
+        <input [(ngModel)]="search_string" placeholder="Search by show title"/>
+        <button (click)="searchSubmit()">Search</button>
+    </div>
+
+    <div class="qleap"><button onclick="window.location.href = 'quantumleap';">Quantum Leap</button></div>
+</div>

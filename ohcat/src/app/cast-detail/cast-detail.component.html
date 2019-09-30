@@ -1,0 +1,62 @@
+<div *ngIf="cast">
+    <div class="date">
+        <h1>{{ cast.date | ohdate }}</h1>
+    </div>
+
+    <!-- <div class="tags">
+        <div *ngFor="let tag of cast.tags">
+            <h2>{{ tag }}</h2>
+        </div>
+    </div> -->
+
+    <div class="shows">
+        <div *ngFor="let show of cast.shows">
+            <div class="show">
+                <div class="showitem">
+                    <img src="{{ globals.api }}/poster/{{ show }}">
+                </div>
+                <div class="showitem">
+                    <p>{{ show }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="has_pics">
+        <div class="pics-container">
+
+            <div class="back-arrow">
+                <img src="../../assets/left.png" (click)="picsScrollBack()">
+            </div>
+
+            <div class="pics">
+                <div *ngFor="let pic of pics_to_render">
+
+
+                    <div class="pic">
+                        <div *ngIf="pic.type=='png' || pic.type=='jpg'; else elseBlock">
+                            <img src="{{ globals.api }}/pic/{{ cast.date }}/{{ pic.name }}">
+                        </div>
+                        <ng-template #elseBlock>
+                            <video #video autoplay loop>
+                                    <source src="{{ globals.api }}/pic/{{ cast.date }}/{{ pic.name }}">
+                            </video>
+                        </ng-template>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="fwd-arrow">
+                <img src="../../assets/right.png" (click)="picsScrollFwd()">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <img src="../../assets/rambo.png">
+    <p>live it; breath it; Outer heaven baby © Outer Heaven. 1989</p>
+</div>
